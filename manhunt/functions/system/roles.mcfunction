@@ -1,4 +1,4 @@
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=Hunter] actionbar §c§lFind and kill §4§b@a[tag=Speedrunner]§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar §c§lFind and kill §4§b@a[tag=speedrunner]§r.
 kill @e[type=item,name=Compass]
 
 #alive player counter 
@@ -6,15 +6,15 @@ scoreboard players set @a[tag=host] players 0
 scoreboard players set @a[tag=host] speed_alive 0
 scoreboard players set @a[tag=host] hunt_alive 0
 scoreboard players set @a counter 1
-scoreboard players set @a[tag=Speedrunner] speedcount 1
-scoreboard players set @a[tag=Hunter] huntcount 1
+scoreboard players set @a[tag=speedrunner] speedcount 1
+scoreboard players set @a[tag=hunter] huntcount 1
 
 execute @a[tag=host] ~~~ execute @a ~~~ scoreboard players operation @a[tag=host] players += @s counter
 execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players operation  "§aJoined: " display = @a[tag=host] players
 execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players reset "§aJoined: " display
 #speedrunner counter
-execute @a[tag=host] ~~~ execute @a[tag=Speedrunner] ~~~ scoreboard players operation @a[tag=host] speed_alive += @s speedcount
-execute @a[tag=host] ~~~ execute @a[tag=Hunter] ~~~ scoreboard players operation @a[tag=host] hunt_alive += @s huntcount
+execute @a[tag=host] ~~~ execute @a[tag=speedrunner] ~~~ scoreboard players operation @a[tag=host] speed_alive += @s speedcount
+execute @a[tag=host] ~~~ execute @a[tag=hunter] ~~~ scoreboard players operation @a[tag=host] hunt_alive += @s huntcount
 execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players operation  "§bSpeedrunner: " display = @a[tag=host] speed_alive
 execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players operation  "§cHunters: " display = @a[tag=host] hunt_alive
 execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players reset "§bSpeedrunner: " display
