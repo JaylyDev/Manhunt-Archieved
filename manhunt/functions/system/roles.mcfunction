@@ -1,6 +1,16 @@
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar §c§lFind and kill §4§b@a[tag=speedrunner]§r.
 kill @e[type=item,name=Compass]
 
+# +---------------------+
+# | 1 | Obtain wood     |
+# | 2 | Obtain stone    |
+# | 3 | Obtain iron     |
+# +---------------------+
+
+
+
+
+
 #alive player counter 
 scoreboard players set @a[tag=host] players 0
 scoreboard players set @a[tag=host] speed_alive 0
