@@ -11,12 +11,12 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ xp 1l @a[l=0,lm=0,tag=hunter]
 execute @a[tag=speedrunner] ~ ~ ~ setworldspawn
 #spectating
 execute @a[tag=spec] ~ ~ ~ function spec
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!Speedrunner,tag=!Hunter,tag=!spec] ~ ~ ~ tellraw @s {"rawtext":[{"text":"§aYou are spectating the match, please do not leave until the match ends."}]}
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!Speedrunner,tag=!Hunter,tag=!spec] ~ ~ ~ ability @s mayfly true
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!Speedrunner,tag=!Hunter,tag=!spec] ~ ~ ~ gamemode a @s
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!Speedrunner,tag=!Hunter,tag=!spec] ~ ~ ~ tp @s @r[tag=!spec]
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!Speedrunner,tag=!Hunter,tag=!spec] ~ ~ ~ tag @s add spec
-execute @a[tag=host,scores={settings_state=2}] ~~~ clear @a[tag=!Speedrunner,tag=!Hunter,tag=spec]
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!speedrunner,tag=!hunter,tag=!spec] ~ ~ ~ tellraw @s {"rawtext":[{"text":"§aYou are spectating the match, please do not leave until the match ends."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!speedrunner,tag=!hunter,tag=!spec] ~ ~ ~ ability @s mayfly true
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!speedrunner,tag=!hunter,tag=!spec] ~ ~ ~ gamemode a @s
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!speedrunner,tag=!hunter,tag=!spec] ~ ~ ~ tp @s @r[tag=!spec]
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!speedrunner,tag=!hunter,tag=!spec] ~ ~ ~ tag @s add spec
+execute @a[tag=host,scores={settings_state=2}] ~~~ clear @a[tag=!speedrunner,tag=!hunter,tag=spec]
 
 #timerend
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tellraw @a {"rawtext":[{"text":"§cHunter(s) won the game!"}]}

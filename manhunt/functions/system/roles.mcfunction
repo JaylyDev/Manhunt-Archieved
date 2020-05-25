@@ -1,4 +1,4 @@
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar Find and kill §4§b@a[tag=speedrunner]§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar Find and kill §c@a[tag=speedrunner]§r.
 kill @e[type=item,name="Kompass"]
 kill @e[type=item,name="Kompas"]
 kill @e[type=item,name="Compass"]
@@ -30,28 +30,34 @@ kill @e[type=item,name="指南针"]
 
 
 # +---------------------------+
-# |  1  | Obtain wood         |
-# |  2  | Obtain stone        |
-# |  3  | Obtain iron         |
-# |  4  | Obtain diamonds     |
-# |  5  | Get obsidian        |
-# |  6  | Make nether portal  |
-# |  7  | Find blaze          |
-# |  8  | Get blaze rod       |
-# |  9  | Throw ender pearl   |
-# | 10  | Locate stronghold   |
-# | 11  | Go to the end       |
-# | 12  | Defeat Ender Dragon |
+# | UID | Mission             | comment/chat hints
+# +---------------------------+
+# |  1  | Obtain wood         | 
+# |  2  | Obtain stone        | 
+# |  3  | Obtain iron         | 25% chat hint: you can also use some buckets of lava to create a portal without using diamond pickaxes.
+# |  4  | Obtain diamonds     | 
+# |  5  | Get obsidian        | 
+# |  6  | Make nether portal  | 
+# |  7  | Find blaze          | 
+# |  8  | Get blaze rod       | 
+# | 20  | Find Ender man      | too lazy so i made the ID look like this
+# | 21  | Get ender pearl     | 
+# |  9  | Throw eye of ender  | chat hint: Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder amd the endeer pearl.
+# | 10  | Locate stronghold   | 
+# | 11  | Go to the end       | 
+# | 12  | Defeat Ender Dragon | 
 # +---------------------------+
 
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=1}] actionbar Get §eWood§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=2}] actionbar Get §eStone§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=3}] actionbar Get §eIron§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=4}] actionbar Get §eDiamonds§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=5}] actionbar Get §eObsidian§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=6}] actionbar Make §ea Nether Portal§r and enter it.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=7}] actionbar Find §cBlaze§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=8}] actionbar Kill §cBlaze§r and get §eBlaze Rod§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=1}] actionbar Obtain §eWood§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=2}] actionbar Mine §eStone§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=3}] actionbar Mine §eIron§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=4}] actionbar Mine §eDiamonds§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=5}] actionbar Obtain §eObsidian§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=6}] actionbar Build a §eNether Portal§r and enter it.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=7}] actionbar Find a §cblaze§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=8}] actionbar Kill the §cBlaze§r and get the §eBlaze Rod§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=20}] actionbar Find a §cEnderman§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=21}] actionbar Kill the §cEnderman§r and get the §ender pearl§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=9}] actionbar Throw §eThe Ender Pearl§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=10}] actionbar Keep throwing until you locate §eEnd Portal§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=11}] actionbar Go to §eThe End§r.
@@ -267,6 +273,66 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=2}] ~~~ execute @e[type=item,name="鵝卵石",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 3
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=2}] ~~~ execute @e[type=item,name="Keien",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 3
 
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Eisenerz",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Jernmalm",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Železná ruda",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Ορυκτός σίδηρος",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Iron Ore",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Желязна руда",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Rautamalmi",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Iron Ore",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Mineral de hierro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Vasérc",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerai de fer",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerale di ferro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="鉄鉱石",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="철광석",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Jernmalm",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Ruda żelaza",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerai de fer",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Mineral de hierro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="IJzererts",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Bijih Besi",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minério de Ferro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minério de Ferro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Järnmalm",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Železná ruda",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Железная руда",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Залізна руда",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Demir Cevheri",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="鐵礦石",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="铁矿石",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
+
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Železná ruda",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Jernmalm",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Eisenerz",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Iron Ore",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Ορυκτός σίδηρος",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Iron Ore",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Mineral de hierro",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Mineral de hierro",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Rautamalmi",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerai de fer",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Желязна руда",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Vasérc",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerale di ferro",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Bijih Besi",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="鉄鉱石",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="철광석",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="IJzererts",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Jernmalm",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerai de fer",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minério de Ferro",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Ruda żelaza",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minério de Ferro",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Železná ruda",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Железная руда",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Demir Cevheri",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Järnmalm",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Залізна руда",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="鐵礦石",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="铁矿石",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"You can also use some buckets of lava to create a portal without using diamond pickaxes."}]}
+
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Желязна руда",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 4
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Eisenerz",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 4
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Ορυκτός σίδηρος",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 4
@@ -296,6 +362,8 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Jernmalm",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 4
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="鐵礦石",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 4
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="铁矿石",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 4
+
+
 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=4}] ~~~ execute @e[type=item,name="Диамант",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 5
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=4}] ~~~ execute @e[type=item,name="Diamant",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 5
@@ -358,38 +426,105 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=5}] ~~~ execute @e[type=item,name="Obsydian",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 6
 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=6}] ~~~ detect ~~~ portal 0 scoreboard players set @s progress 7
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=6}] ~~~ detect ~~~ portal 1 scoreboard players set @s progress 7
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=6}] ~~~ detect ~~~ portal 2 scoreboard players set @s progress 7
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=6}] ~~~ detect ~~~ portal 3 scoreboard players set @s progress 7
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=6}] ~~~ detect ~~~ portal 4 scoreboard players set @s progress 7
 
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=7}] ~~~ execute @e[type=blaze,r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 8
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=7}] ~~~ execute @e[type=blaze,r=5] ~~~ scoreboard players set @p[tag=speedrunner] progress 8
 
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Ohnivý prut",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Ράβδος φλόγας",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Lohenrute",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze Rod",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze Rod",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Пръчка на пламък",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Vara de llama",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blazestav",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Vara de Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Bâton de Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Lieskatanko",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Bâton de blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Tongkat Kobaran Api",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Verga di Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Lángrúd",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="ブレイズ ロッド",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="블레이즈 막대",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze-staaf",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blusserstav",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Varinha de Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Огненный стержень",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Płomienna różdżka",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze Çubuğu",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Žiarivá tyč",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Flamstav",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Вогняний прут",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="烈焰棒",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Vara Incandescente",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="烈焰棒",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Ohnivý prut",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Ράβδος φλόγας",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Lohenrute",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze Rod",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze Rod",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Пръчка на пламък",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Vara de llama",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blazestav",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Vara de Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Bâton de Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Lieskatanko",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Bâton de blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Tongkat Kobaran Api",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Verga di Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Lángrúd",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="ブレイズ ロッド",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="블레이즈 막대",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze-staaf",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blusserstav",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Varinha de Blaze",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Огненный стержень",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Płomienna różdżka",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Blaze Çubuğu",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Žiarivá tyč",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Flamstav",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Вогняний прут",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="烈焰棒",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="Vara Incandescente",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=8}] ~~~ execute @e[type=item,name="烈焰棒",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 20
+
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=20}] ~~~ execute @e[type=enderman,r=5] ~~~ scoreboard players set @p[tag=speedrunner] progress 21
+
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla z enderu",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Μαργαριτάρι του Τελειωτή",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Перла от пагубник",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender Pearl",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender Pearl",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla de Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla de Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Äärenhelmi",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perle de l'Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perle de l'Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Bevégzőgyöngy",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Mutiara Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla di Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="エンダーパール",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderperle",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderparel",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perła Kresu",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="엔더 진주",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla z konca sveta",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Pérola do End",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Pérola de Ender",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Жемчуг Края",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender İncisi",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderpärla",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="末影珍珠",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender-perle",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderperle",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="終界珍珠",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Перлина Ендеру",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
+
+
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender-perle",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Перла от пагубник",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla z enderu",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender Pearl",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender Pearl",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla de Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla de Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perle de l'Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Μαργαριτάρι του Τελειωτή",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Äärenhelmi",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Bevégzőgyöngy",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Mutiara Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderperle",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perle de l'Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla di Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderperle",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderparel",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perła Kresu",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Pérola do End",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Pérola de Ender",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Жемчуг Края",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Enderpärla",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="엔더 진주",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender İncisi",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Перлина Ендеру",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="末影珍珠",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla z konca sveta",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="エンダーパール",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="終界珍珠",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=9}] ~~~ execute @e[type=eye_of_ender_signal] ~~~ scoreboard players set @p[tag=speedrunner] progress 10
 
