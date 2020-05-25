@@ -401,7 +401,6 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=14}] ~~~ detect ~ 0 ~ air 0 scoreboard players set @s progress 15
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=15}] ~~~ execute @a[tag=host,scores={settings_state=2}] ~ ~ ~ scoreboard players set timer 1
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=15}] ~~~ scoreboard players set @s progress 0
-#TODO: add end game events here
 
 #alive player counter 
 scoreboard players set @a[tag=host] players 0
