@@ -12,6 +12,7 @@ scoreboard objectives add settings_healing dummy
 scoreboard objectives add settings_time dummy
 scoreboard objectives add settings_warmup dummy
 scoreboard objectives add progress dummy
+scoreboard objectives add spawn_time dummy
 #default settings
 scoreboard players set @s settings_healing 1
 scoreboard players set @s settings_time 0

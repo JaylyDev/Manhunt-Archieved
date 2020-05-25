@@ -25,7 +25,15 @@ execute @s[tag=host,scores={settings_state=2}] ~~~ playsound mob.elderguardian.c
 execute @s[tag=host,scores={settings_state=2}] ~~~ title @a title §c§lGame started
 execute @s[tag=host,scores={settings_state=2}] ~~~ title @a subtitle §c§lspeedrunner: §b@a[tag=speedrunner]
 execute @s[tag=host,scores={settings_state=2}] ~~~ gamemode s @a
-execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.armor.chest 0 iron_chestplate 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ effect @a[tag=speedrunner] health_boost 216000 12 true
+execute @s[tag=host,scores={settings_state=2}] ~~~ effect @a[tag=speedrunner] instant_health 1 255 true
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.armor.chest 0 leather_chestplate 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.armor.head 0 leather_helmet 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.armor.feet 0 leather_boots 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.armor.legs 0 leather_leggings 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.hotbar 0 stone_sword 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.hotbar 1 stone_axe 1
+execute @s[tag=host,scores={settings_state=2}] ~~~ replaceitem entity @a[tag=speedrunner] slot.hotbar 2 stone_pickaxe 1
 execute @s[tag=host,scores={players=2..,settings_time=0}] ~~~ scoreboard players set @s timer 18000
 execute @s[tag=host,scores={players=2..,settings_time=1}] ~~~ scoreboard players set @s timer 36000
 tellraw @s[tag=host,scores={settings_state=1}] {"rawtext":[{"text":"§c§lERROR§r Unable to start the game."}]}

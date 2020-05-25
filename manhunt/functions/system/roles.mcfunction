@@ -1,4 +1,6 @@
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar Find and kill §c@a[tag=speedrunner]§r.
+
+
 kill @e[type=item,name="Kompass"]
 kill @e[type=item,name="Kompas"]
 kill @e[type=item,name="Compass"]
@@ -280,7 +282,6 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Iron Ore",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Желязна руда",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Rautamalmi",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Iron Ore",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Mineral de hierro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Vasérc",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minerai de fer",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
@@ -293,7 +294,6 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Mineral de hierro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="IJzererts",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Bijih Besi",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minério de Ferro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Minério de Ferro",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Järnmalm",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=3}] ~~~ execute @e[type=item,name="Železná ruda",r=2] ~~~ tellraw @a {"rawtext":[{"text":"The speedrunner has completed 25% of the game!"}]}
@@ -495,7 +495,6 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="終界珍珠",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Перлина Ендеру",r=2] ~~~ tellraw @p[tag=speedrunner] {"rawtext":[{"text":"Craft blaze powder using the blaze rod, and craft the eye of ender using the blaze powder and the ender pearl."}]}
 
-
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Ender-perle",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Перла от пагубник",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=21}] ~~~ execute @e[type=item,name="Perla z enderu",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 9
@@ -567,3 +566,8 @@ effect @a[tag=!Speedrunner,tag=!Hunter,tag=spec] weakness 1 255 true
 effect @a[tag=!Speedrunner,tag=!Hunter,tag=spec] fire_resistance 1 255 true
 effect @a[tag=!Speedrunner,tag=!Hunter,tag=spec] water_breathing 1 255 true
 effect @a[tag=!Speedrunner,tag=!Hunter,tag=spec] regeneration 1 255 true
+
+#settings for the roles
+#runner
+execute @a[tag=host,scores={settings_state=2}] ~~~ enchant @a[tag=speedrunner] sharpness 3
+execute @a[tag=host,scores={settings_state=2}] ~~~ enchant @a[tag=speedrunner] efficiency 3

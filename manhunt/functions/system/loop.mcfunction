@@ -1,11 +1,13 @@
 execute @a[tag=host,scores={settings_state=1}] ~~~ title @a actionbar §eWaiting to start...
 execute @a[tag=host,scores={settings_state=1}] ~~~ effect @a weakness 1 0 true
 
-#on player die
-#the crappy death animation
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter] ~~~ spreadplayers ~ ~ 1 2 @s
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter] ~~~ title @s title You died!
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter] ~~~ tellraw @s {"rawtext":[{"text":"§7You died! Go hunt the Speedrunner down in a limited time!"}]} 
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner] ~~~ spreadplayers ~ ~ 2 30 @a[l=0,lm=0,tag=hunter]
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter] scoreboard players set @s spawn_time 600
+execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players remove @a[tag=hunter] spawn_time 1
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter,scores={spawn_time=1..600}] actionbar Waiting to spawn...
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=hunter,scores={spawn_time=1..600}] ~~~ tp ~~~
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] ~~~ tellraw @s {"rawtext":[{"text":"You have respawned."}]} 
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] ~~~ scoreboard players set @s spawn_time 0
 execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter] compass
 execute @a[tag=host,scores={settings_state=2}] ~~~ xp 1l @a[l=0,lm=0,tag=hunter]
 execute @a[tag=speedrunner] ~ ~ ~ setworldspawn
