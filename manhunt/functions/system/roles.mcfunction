@@ -56,6 +56,7 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scor
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=10}] actionbar Keep throwing until you locate §eEnd Portal§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=11}] actionbar Go to §eThe End§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=12}] actionbar Kill §cEnder Dragon§r and go back to §eOverworld§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=13}] actionbar Kill §cEnder Dragon§r and go back to §eOverworld§r.
 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=1}] ~~~ execute @e[type=item,name="Дънер от дъб",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 2
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=1}] ~~~ execute @e[type=item,name="Dubové poleno",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 2
@@ -395,8 +396,11 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=10}] ~~~ detect ~~-0.01~ end_portal_frame 0 scoreboard players set @s progress 11
 
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=11}] ~~~ detect ~~-0.01~ end_portal 0 scoerboard players set @s progress 12
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=12}] ~~~ 
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=11}] ~~~ detect ~~-0.01~ end_portal 0 scoreboard players set @s progress 12
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=12}] ~~~ detect ~~-0.01~ end_stone 0 scoreboard players set @s progress 13
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=13}] ~~~ detect ~~-0.01~ end_portal 0 scoreboard players set @s progress 14
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=14}] ~~~ detect ~ 0 ~ air 0 scoreboard players set @s progress 15
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=15}] ~~~ execute @a[tag=host,scores={settings_state=2}] ~ ~ ~ scoreboard players set timer 1
 #TODO: add end game events here
 
 #alive player counter 
