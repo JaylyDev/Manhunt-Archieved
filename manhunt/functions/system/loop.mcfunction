@@ -42,8 +42,8 @@ execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a[tag=hunter] subtitle §cYou lost!
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a[tag=hunter] title 
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ gamemode 2 @a
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove Hunter
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove Speedrunner
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove hunter
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove speedrunner
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove spec
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ scoreboard players set @s settings_state 0
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ scoreboard objectives setdisplay sidebar
