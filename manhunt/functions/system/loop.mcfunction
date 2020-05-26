@@ -4,12 +4,12 @@ execute @a[tag=host,scores={settings_state=1}] ~~~ effect @a weakness 1 0 true
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner] ~~~ spreadplayers ~ ~ 2 30 @a[l=0,lm=0,tag=hunter]
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter] scoreboard players set @s spawn_time 600
 execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players remove @a[tag=hunter] spawn_time 1
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter,scores={spawn_time=1..600}] actionbar Waiting to spawn...
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter,scores={spawn_time=1..600}] actionbar Respawning...
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=hunter,scores={spawn_time=1..600}] ~~~ tp ~~~
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] ~~~ tellraw @s {"rawtext":[{"text":"You have respawned."}]} 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] ~~~ scoreboard players set @s spawn_time 0
-execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter] compass
-execute @a[tag=host,scores={settings_state=2}] ~~~ xp 1l @a[l=0,lm=0,tag=hunter]
+execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] compass
+execute @a[tag=host,scores={settings_state=2}] ~~~ xp 1l @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}]
 execute @a[tag=speedrunner] ~ ~ ~ setworldspawn
 #spectating
 execute @a[tag=spec] ~ ~ ~ function spec
