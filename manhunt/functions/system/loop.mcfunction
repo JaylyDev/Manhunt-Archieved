@@ -28,8 +28,8 @@ execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=hunter] subtitle §eCongrats!
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=hunter] title §eYou have won!
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ gamemode 2 @a
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove Hunter
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove Speedrunner
+execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove hunter
+execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove speedrunner
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove spec
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ scoreboard players set @s settings_state 0
 execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ scoreboard objectives setdisplay sidebar
