@@ -2,9 +2,9 @@
     "format_version": 2,
     "header": {
         "description": "Addon By §eAliom§r\n§4YouTube: JaylyMC",
-        "name": "Minecraft Manhunt Dev 1.1",
+        "name": "Minecraft Manhunt Dev 1.2",
         "uuid": "1340e32a-ccf2-4f2f-b84d-c6bf3a6795b6",
-        "version": [ 1, 1, 0 ],
+        "version": [ 1, 2, 0 ],
         "min_engine_version": [ 1, 14, 6 ]
     },
     "modules": [
