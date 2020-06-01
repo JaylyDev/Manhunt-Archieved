@@ -17,30 +17,43 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=!speedrunner,t
 execute @a[tag=host,scores={settings_state=2}] ~~~ clear @a[tag=!speedrunner,tag=!hunter,tag=spec]
 
 #timerend
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tellraw @a {"rawtext":[{"text":"§cHunter(s) won the game!"}]}
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a title §cGame ended
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=speedrunner] subtitle §cYou lost!
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=speedrunner] title 
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=hunter] subtitle §eCongrats!
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=hunter] title §eYou have won!
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ gamemode 2 @a
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove hunter
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove speedrunner
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove spec
-execute @s[tag=host,scores={settings_state=2,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ scoreboard players set @s settings_state 0
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tellraw @a {"rawtext":[{"text":"§cHunter(s) won the game!"}]}
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a title §cGame ended
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=speedrunner] subtitle §cYou lost!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=speedrunner] title 
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=hunter] subtitle §eCongrats!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ title @a[tag=hunter] title §eYou have won!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ gamemode 2 @a
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ xp -32427l @a
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ execute @a[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..}] ~~~ scoreboard players set @s settings_state 0
+execute @s[tag=host,scores={settings_state=0}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove hunter
+execute @s[tag=host,scores={settings_state=0}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove spec
+execute @s[tag=host,scores={settings_state=0}] ~~~ execute @a[tag=speedrunner,l=0,lm=0] ~ ~ ~ tag @a remove speedrunner
 execute @s[tag=host,scores={settings_state=0}] ~ ~ ~ scoreboard objectives setdisplay sidebar
 
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tellraw @a {"rawtext":[{"text":"§eSpeedrunner won the game!"}]}
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a title §cGame ended
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a[tag=speedrunner] subtitle §eCongrats!
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a[tag=speedrunner] title §eYou have won!
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a[tag=hunter] subtitle §cYou lost!
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ title @a[tag=hunter] title 
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ gamemode 2 @a
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove hunter
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ tellraw @a {"rawtext":[{"text":"§eSpeedrunner won the game!"}]}
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ title @a title §cGame ended
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ title @a[tag=speedrunner] subtitle §eCongrats!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ title @a[tag=speedrunner] title §eYou have won!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ title @a[tag=hunter] subtitle §cYou lost!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ title @a[tag=hunter] title 
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ gamemode 2 @a
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=1..,timer=0}] ~~~ xp -32427l @a
+execute @s[tag=host,scores={settings_state=2,hunt_alive=1..,timer=0}] ~~~ tag @a remove hunter
 execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove speedrunner
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ tag @a remove spec
-execute @s[tag=host,scores={settings_state=2,speed_alive=1..,timer=0}] ~~~ scoreboard players set @s settings_state 0
+execute @s[tag=host,scores={settings_state=2,speed_alive=0,hunt_alive=0,timer=0}] ~~~ tag @a remove spec
+execute @s[tag=host,scores={settings_state=2,speed_alive=0,hunt_alive=0,timer=0}] ~~~ scoreboard players set @s settings_state 0
+execute @s[tag=host,scores={settings_state=0}] ~ ~ ~ scoreboard objectives setdisplay sidebar
+
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ tellraw @a {"rawtext":[{"text":"§cHunter(s) left the game! Speedrunner wins!"}]}
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ title @a title §cGame ended
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ title @a[tag=speedrunner] subtitle §eYou won!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ title @a[tag=speedrunner] title §eCongrats!
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ gamemode 2 @a
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ xp -32427l @a
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ tag @a remove spec
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ tag @a remove speedrunner
+execute @s[tag=host,scores={settings_state=2,speed_alive=1..,hunt_alive=0}] ~ ~ ~ scoreboard players set @s settings_state 0
 execute @s[tag=host,scores={settings_state=0}] ~ ~ ~ scoreboard objectives setdisplay sidebar
 
 #rules

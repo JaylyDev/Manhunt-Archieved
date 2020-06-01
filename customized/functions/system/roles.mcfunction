@@ -556,8 +556,8 @@ execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players reset "§b
 execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players reset "§cHunters: " display
 
 #spec
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove Speedrunner
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove Hunter
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove speedrunner
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove hunter
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ title @a[tag=spec] actionbar §e§lSpectating
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ gamemode a @s
 xp -100l @a[tag=!Speedrunner,tag=!Hunter,tag=spec]

@@ -1,4 +1,4 @@
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar Find and kill §c@a[tag=speedrunner]§r.
+execute @s[tag=host,scores={settings_state=2}] ~~~ title @a[tag=hunter] actionbar Find and kill §c@a[tag=speedrunner]§r.
 
 
 kill @e[type=item,name="Kompass"]
@@ -51,8 +51,8 @@ execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players reset "§c
 
 execute @a[tag=host,scores={settings_state=1,settings_guide=1}] ~~~ function system/guide
 #spec
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove Speedrunner
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove Hunter
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove speedrunner
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ tag @s remove hunter
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ title @a[tag=spec] actionbar §e§lSpectating
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=spec] ~ ~ ~ gamemode a @s
 xp -100l @a[tag=!Speedrunner,tag=!Hunter,tag=spec]
