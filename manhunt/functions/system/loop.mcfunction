@@ -9,7 +9,9 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=hunter,scores=
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] ~~~ tellraw @s {"rawtext":[{"text":"You have respawned."}]} 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] ~~~ scoreboard players set @s spawn_time 0
 execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] compass
-execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] stone_sword
+execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] iron_sword
+execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] iron_pickaxe
+execute @a[tag=host,scores={settings_state=2}] ~~~ give @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}] iron_chestplate
 execute @a[tag=host,scores={settings_state=2}] ~~~ xp 1l @a[l=0,lm=0,tag=hunter,scores={spawn_time=0}]
 execute @a[tag=speedrunner] ~ ~ ~ setworldspawn
 #spectating
