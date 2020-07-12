@@ -1,4 +1,5 @@
 execute @s[tag=host,scores={settings_state=1}] ~~~ scoreboard players set @s settings_time 1
+execute @s[tag=host,scores={settings_state=1}] ~~~ scoreboard players set @s timer_enabled 1
 execute @s[tag=host,scores={settings_state=1}] ~~~ tellraw @a {"rawtext":[{"text":"Changed game time to §elong§f."}]}
 execute @s[tag=host,scores={settings_state=1}] ~~~ tellraw @a {"rawtext":[{"text":"§lTIME EVENTS"}]}
 execute @s[tag=host,scores={settings_state=1}] ~~~ tellraw @a {"rawtext":[{"text":"§e1 Minute§f - grace period"}]}

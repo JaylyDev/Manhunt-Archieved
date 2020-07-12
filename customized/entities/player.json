@@ -59,8 +59,8 @@
         // ---- NOT Standard player's caracteristics ----    	
         "minecraft:standard_player": {
             "minecraft:health": {
-                "value": 8,
-                "max": 8
+                "value": 20,
+                "max": 20
             },
             "minecraft:movement": {
                 "value": 0.1

@@ -63,7 +63,7 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scor
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=9}] actionbar Throw §eThe Ender Pearl§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=10}] actionbar Keep throwing until you locate §eEnd Portal§r.
 execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=11}] actionbar Go to §eThe End§r.
-execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=12...15}] actionbar Kill §cEnder Dragon§r and go back to §eOverworld§r.
+execute @a[tag=host,scores={settings_state=2}] ~~~ title @a[tag=speedrunner,scores={progress=12..15}] actionbar Kill §cEnder Dragon§r and go back to §eOverworld§r.
 
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=1}] ~~~ execute @e[type=item,name="Дънер от дъб",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 2
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=1}] ~~~ execute @e[type=item,name="Dubové poleno",r=2] ~~~ scoreboard players set @p[tag=speedrunner] progress 2
@@ -533,16 +533,18 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,sc
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=12}] ~~~ detect ~~-0.01~ end_stone 0 scoreboard players set @s progress 13
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=13}] ~~~ detect ~~-0.01~ end_portal 0 scoreboard players set @s progress 14
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=14}] ~~~ detect ~ 0 ~ air 0 scoreboard players set @s progress 15
-execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=15}] ~~~ execute @a[tag=host,scores={settings_state=2}] ~ ~ ~ scoreboard players set timer 1
+execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=15}] ~~~ execute @a[tag=host,scores={settings_state=2}] ~ ~ ~ scoreboard players set @s timer 1
 execute @a[tag=host,scores={settings_state=2}] ~~~ execute @a[tag=speedrunner,scores={progress=15}] ~~~ scoreboard players set @s progress 0
 
 #alive player counter 
 scoreboard players set @a[tag=host] players 0
 scoreboard players set @a[tag=host] speed_alive 0
 scoreboard players set @a[tag=host] hunt_alive 0
+scoreboard players set @a[tag=host] applytrack 0
 scoreboard players set @a counter 1
 scoreboard players set @a[tag=speedrunner] speedcount 1
 scoreboard players set @a[tag=hunter] huntcount 1
+scoreboard players set @a[tag=track] trackcount 1
 
 execute @a[tag=host] ~~~ execute @a ~~~ scoreboard players operation @a[tag=host] players += @s counter
 execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players operation  "§aJoined: " display = @a[tag=host] players
@@ -550,6 +552,7 @@ execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players reset "§a
 #speedrunner counter
 execute @a[tag=host] ~~~ execute @a[tag=speedrunner] ~~~ scoreboard players operation @a[tag=host] speed_alive += @s speedcount
 execute @a[tag=host] ~~~ execute @a[tag=hunter] ~~~ scoreboard players operation @a[tag=host] hunt_alive += @s huntcount
+execute @a[tag=host] ~~~ execute @a[tag=track] ~~~ scoreboard players operation @a[tag=host] applytrack += @s trackcount
 execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players operation  "§bSpeedrunner: " display = @a[tag=host] speed_alive
 execute @a[tag=host,scores={settings_state=2}] ~~~ scoreboard players operation  "§cHunters: " display = @a[tag=host] hunt_alive
 execute @a[tag=host,scores={settings_state=1}] ~~~ scoreboard players reset "§bSpeedrunner: " display
@@ -569,5 +572,5 @@ effect @a[tag=!Speedrunner,tag=!Hunter,tag=spec] regeneration 1 255 true
 
 #settings for the roles
 #runner
-execute @a[tag=host,scores={settings_state=2}] ~~~ enchant @a[tag=speedrunner] sharpness 3
-execute @a[tag=host,scores={settings_state=2}] ~~~ enchant @a[tag=speedrunner] efficiency 3
+execute @a[tag=host,scores={settings_state=2}] ~~~ enchant @a[tag=speedrunner] sharpness 1
+execute @a[tag=host,scores={settings_state=2}] ~~~ enchant @a[tag=speedrunner] efficiency 1
