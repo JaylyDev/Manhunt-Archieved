@@ -1,0 +1,181 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.walk": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/function system/loop"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/function system/roles"
+					]
+				}
+			}
+		},
+		"controller.animation.enderdragon.death":{
+			"states":{
+			   "runtimes":{
+				  "transitions":[{ "detect_dragon":"query.is_alive" }]
+			   },            
+			   "detect_dragon":{
+				  "transitions":[{ "on_challenge_complete":"!query.is_alive" }]
+			   },
+			   "on_challenge_complete":{
+				  "transitions":[{"runtimes":"(1.0)"}],
+				  "on_entry":[ "/function system/enderdragondeath" ]
+			   }
+			}
+		 },
+		 "controller.animation.speedrunning_guides": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						},
+						{
+							"execute_command_id_2": "query.skin_id == 2"
+						},
+						{
+							"execute_command_id_3": "query.skin_id == 3"
+						},
+						{
+							"execute_command_id_4": "query.skin_id == 4"
+						},
+						{
+							"execute_command_id_6": "query.skin_id == 6"
+						},
+						{
+							"execute_command_id_8": "query.skin_id == 8"
+						},
+						{
+							"execute_command_id_9": "query.skin_id == 9"
+						},
+						{
+							"execute_command_id_10": "query.skin_id == 10"
+						},
+						{
+							"execute_command_id_11": "query.skin_id == 11"
+						},
+						{
+							"execute_command_id_12": "query.skin_id == 12"
+						}
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/1a"
+					]
+				},
+				"execute_command_id_2": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 2"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/2a"
+					]
+				},
+				"execute_command_id_3": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 3"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/3a"
+					]
+				},
+				"execute_command_id_4": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 4"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/4a"
+					]
+				},
+				"execute_command_id_6": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 6"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/6a"
+					]
+				},
+				"execute_command_id_8": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 8"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/8a"
+					]
+				},
+				"execute_command_id_9": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 9"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/9a"
+					]
+				},
+				"execute_command_id_10": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 10"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/10a"
+					]
+				},
+				"execute_command_id_11": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 11"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/11a"
+					]
+				},
+				"execute_command_id_12": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 12"
+						}
+					],
+					"on_entry": [
+						"/function system/guides/12a"
+					]
+				}
+			}
+		}
+	}
+}
